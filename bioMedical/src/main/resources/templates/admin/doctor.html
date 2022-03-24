@@ -33,7 +33,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="AdminHome.jsp">Doctor+ Admin Dashboard</a>
+      <a class="navbar-brand mr-1" href="AdminHome.jsp"><span>Re</span>Medic</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -164,22 +164,12 @@
                       <th>Email</th>
                          <th>Gender</th>
                        <th>Role</th>
+                       <th>Department</th>
                      <th>Last-seen</th>
                     
                       
                     </tr>
                   </thead>
-                  <tfoot>
-                    <tr> 		
-                    	<th>Id</th>
-                      <th>First Name</th>
-                      <th>Last Name</th>
-                      <th>Email</th>
-                         <th>Gender</th>
-                     <th>Role</th>
-                      <th>Last-seen</th>
-                    
-                    </tr>
                   <tbody>
        	<tr th:each="temp : ${user}">
        	
@@ -188,7 +178,8 @@
 				 <td th:text="${temp.lastName}"/>
 				<td   th:text="${temp.email}" />	
 					<td  th:text="${temp.gender}" />	
-				<td th:text="${temp.role}" />	
+				<td th:text="${temp.role}" />
+				<td th:text="${temp.department}" />	
 				<td th:text="${temp.lastseen}" />
 		</tr>
        
@@ -200,15 +191,6 @@
           </div>
 
         <!-- /.container-fluid -->
-
-        <!-- Sticky Footer -->
-        <footer class="sticky-footer">
-          <div class="container my-auto">
-            <div class="copyright text-center my-auto">
-              <span>Copyright ©Soumyadip Spring-Boot-JPA 2019</span>
-            </div>
-          </div>
-        </footer>
 
       </div>
       <!-- /.content-wrapper -->
